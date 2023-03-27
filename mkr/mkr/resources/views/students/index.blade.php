@@ -1,6 +1,6 @@
 
     <h1>Список студентів</h1>
-    <table>
+    <table border="1px solid black">
         <thead>
         <tr>
             <th>Id</th>
@@ -10,16 +10,18 @@
             <th>Дії</th>
         </tr>
         </thead>
-        <tbody>
         @foreach($students as $student)
-            <tr>
-                <td>{{ $student->id }}</td>
-                <td>{{ $student->name }}</td>
-                <td>{{ $student->course }}</td>
-                <td>{{ $student->specialty }}</td>
-                <td><a href="{{ route('students.edit', $student->id) }}">Редагувати</a></td>
-            </tr>
+            <form>
+                <tr>
+                    <td>{{ $student->id }}</td>
+                    <td>{{ $student->name }}</td>
+                    <td>{{ $student->course }}</td>
+                    <td>{{ $student->specialty }}</td>
+                    <td>
+                        <a href="{{ route('students.edit', $student->id) }}">Редагувати</a>
+                    </td>
+                </tr>
+            </form>
         @endforeach
-        </tbody>
+        </tb>
     </table>
-
