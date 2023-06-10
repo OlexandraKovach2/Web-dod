@@ -45,7 +45,7 @@ class Comment extends Resource
             ID::make()->sortable(),
             Text::make('name'),
             Text::make('text'),
-            HasMany::make('Comments', 'comments', CommentController::class),
+            HasMany::make('News', 'news', News::class),
         ];
     }
 

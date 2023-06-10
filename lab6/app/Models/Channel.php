@@ -17,9 +17,9 @@ class Channel extends Model
         'news_id'
     ];
 
-    public function channel(): BelongsTo
+    public function news(): BelongsTo
     {
-        return $this->belongsTo(ChannelController::class);
+        return $this->belongsTo(News::class);
     }
     public function user(): BelongsTo
     {

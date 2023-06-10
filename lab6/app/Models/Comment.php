@@ -15,8 +15,8 @@ class Comment extends Model
         'text'
     ];
 
-    public function comment(): HasMany
+    public function news(): HasMany
     {
-        return $this->hasMany(CommentController::class);
+        return $this->hasMany(News::class);
     }
 }

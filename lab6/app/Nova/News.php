@@ -48,7 +48,7 @@ class News extends Resource
             Text::make('date'),
             Text::make('count_view'),
             Text::make('comments_id'),
-            HasMany::make('News', 'news', NewsController::class)
+            HasMany::make('Channels', 'channel', Channel::class)
 
         ];
     }

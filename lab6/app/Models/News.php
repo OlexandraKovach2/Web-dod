@@ -18,8 +18,8 @@ class News extends Model
         'comments_id',
     ];
 
-    public function news(): HasMany
+    public function channels(): HasMany
     {
-        return $this->hasMany(NewsController::class);
+        return $this->hasMany(Channel::class);
     }
 }

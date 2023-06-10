@@ -48,7 +48,7 @@ class Channel extends Resource
             Text::make('author'),
             Text::make('topic'),
             Text::make('news_id'),
-            BelongsTo::make('Channels', 'channels', ChannelController::class),
+            BelongsTo::make('News', 'news', News::class),
             BelongsTo::make('User', 'user', User::class)
 
         ];
